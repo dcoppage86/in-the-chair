@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_16_071227) do
+ActiveRecord::Schema.define(version: 2021_03_16_223114) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "day_and_time"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(version: 2021_03_16_071227) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["provider_id"], name: "index_appointments_on_provider_id"
     t.index ["user_id"], name: "index_appointments_on_user_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "provider_id", null: false
+    t.string "content"
+    t.string "rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["provider_id"], name: "index_comments_on_provider_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "providers", force: :cascade do |t|
@@ -41,4 +52,6 @@ ActiveRecord::Schema.define(version: 2021_03_16_071227) do
 
   add_foreign_key "appointments", "providers"
   add_foreign_key "appointments", "users"
+  add_foreign_key "comments", "providers"
+  add_foreign_key "comments", "users"
 end

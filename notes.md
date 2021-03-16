@@ -3,6 +3,8 @@ In The Chair
 User
     - has_many :appointments
     - has_many :providers, through: :appointments
+    - has_many :comments
+    - has_many :provider_comments, :through => :comments, :source => :provider
 
     - first_name
     - last_name
@@ -21,9 +23,19 @@ Appointment
 Provider
     - has_many :appointments
     - has_many :users, through: :appointments
+    - has_many :comments
+    - has_many :user_comments, :through => :comments, :source => :user
 
     - name
     - schedule
+
+Comment
+
+    - belongs_to :user
+    - belongs_to :provider
+
+    - content
+    - rating
 
 
 
