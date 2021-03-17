@@ -1,1 +1,5 @@
-this is my show page
+<h1>Welcome, <%= @user.first_name %></h1>
+
+<form action="/logout", method="DELETE">
+    <input type="submit" value="Logout">
+</form>
