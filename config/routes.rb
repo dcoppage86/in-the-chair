@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new'
 
-  delete '/logout' => "sessions#logout"
+  delete '/logout' => "sessions#destroy"
   
   resources :providers
   resources :appointments
