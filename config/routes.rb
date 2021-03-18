@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new'
   # login
-  get '/login' => "sessions#login"
+  get '/login' => "sessions#new"
 
   # logout
   delete '/logout' => "sessions#destroy"

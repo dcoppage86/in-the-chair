@@ -3,8 +3,8 @@ class SessionsController < ApplicationController
 
     end
 
-    def login 
-        
+    def new
+
     end
 
     def destroy
