@@ -159,6 +159,8 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    simple_calendar (2.4.1)
+      rails (>= 3.0)
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
@@ -177,6 +179,8 @@ GEM
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    trix (0.10.1)
+      rails
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -217,10 +221,12 @@ DEPENDENCIES
   rails (~> 6.0.3, >= 6.0.3.5)
   sass-rails (>= 6)
   selenium-webdriver
+  simple_calendar (~> 2.4)
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
+  trix
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
